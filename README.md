@@ -1,3 +1,6 @@
+# Note de l'auteur
+Les fonctionnalité de base sont disponible sur l'application, et je me suis permis d'adopter une structure extensible pour d'eventuelle ajout de fonctionnalités, comme ajout de nombre de joueur, ajout de tour et ajout de dés. J'ai également utilis" MIU pour crée mes composants.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

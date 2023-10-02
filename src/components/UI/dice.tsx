@@ -13,9 +13,9 @@ interface DiceProps {
 const Dice: React.FC<DiceProps> = ({ players, totalRounds, diceCount }) => {
   const [diceValues, setDiceValues] = useState<number[]>(
     Array(diceCount).fill(0)
-  );
-  const [currentPlayerIndex, setCurrentPlayerIndex] = useState<number>(0);
-  const [scores, setScores] = useState<number[]>(Array(players.length).fill(0));
+  ); // dice values init to 0
+  const [currentPlayerIndex, setCurrentPlayerIndex] = useState<number>(0); //index of the player who is playing now
+  const [scores, setScores] = useState<number[]>(Array(players.length).fill(0)); 
   const [round, setRound] = useState<number>(1); // 1 round have players.length roll
   const [rollCount, setRollCount] = useState<number>(0); //use to count the number of player who's roll dice in a round
   const [rollDiceDisabled, setRollDiceDisabled] = useState<boolean>(false);
@@ -29,9 +29,11 @@ const Dice: React.FC<DiceProps> = ({ players, totalRounds, diceCount }) => {
 	}
   const rollDice = () => {
 		setRollDiceDisabled(true)
+
 		const newDiceValues = Array(diceCount)
 		.fill(0)
 		.map(() => Math.floor(Math.random() * 6) + 1);
+
     setDiceValues(newDiceValues);
     setRollCount(rollCount + 1);
   };
